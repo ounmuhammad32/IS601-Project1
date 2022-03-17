@@ -2,7 +2,7 @@
 
 [![Production Workflow](https://github.com/ounmuhammad32/IS601-Project1/actions/workflows/prod.yml/badge.svg)](https://github.com/ounmuhammad32/IS601-Project1/actions/workflows/prod.yml)
 
-* [Production Deployment](https://dashboard.heroku.com/apps/ounwebsite)
+* [Production Deployment](https://ounwebsite.herokuapp.com)
 
 
 [![Development Workflow](https://github.com/ounmuhammad32/IS601-Project1/actions/workflows/dev.yml/badge.svg)](https://github.com/ounmuhammad32/IS601-Project1/actions/workflows/dev.yml)
