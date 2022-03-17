@@ -7,7 +7,7 @@
 
 [![Development Workflow](https://github.com/ounmuhammad32/IS601-Project1/actions/workflows/dev.yml/badge.svg)](https://github.com/ounmuhammad32/IS601-Project1/actions/workflows/dev.yml)
 
-* [Developmental Deployment](https://dashboard.heroku.com/apps/ounwebsite)
+* [Developmental Deployment](https://ounwebsite.herokuapp.com)
 
 ## Setting up CI/CD
 
