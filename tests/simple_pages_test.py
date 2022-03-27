@@ -9,6 +9,7 @@ def test_request_main_menu_links(client):
 
 
 
+
 def test_request_index(client):
     """This tests home page"""
     response = client.get("/")
