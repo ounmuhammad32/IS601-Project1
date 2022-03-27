@@ -217,9 +217,9 @@
                             Python </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{{ url_for('simple_pages.show', page="AAAtesting")}}">AAA Testing</a></li>
-                            <li><a class="dropdown-item" href="{{ url_for('simple_pages.show', page="pylint")}}">Pylint and others</a></li>
-                            <li><a class="dropdown-item" href="{{ url_for('simple_pages.show', page="OOPs")}}">OOP</a></li>
-                            <li><a class="dropdown-item" href="{{ url_for('simple_pages.show', page="SOLID")}}">SOLID</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('simple_pages.show', page="pylint")}}">Pylint</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('simple_pages.show', page="OOPs")}}">OOP Concepts</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('simple_pages.show', page="SOLID")}}">SOLID Principles</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -248,6 +248,8 @@
                 </svg>
             </a>
 
+             <p>E-mail: om9@njit.edu</p>
+
 
 
     <!-- <footer>
@@ -261,6 +263,18 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+             <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+    $(function(){
+        $('a').each(function(){
+            if ($(this).prop('href') === window.location.href) {
+                $(this).addClass('active'); $(this).parents('li').addClass('active');
+            }
+        });
+    });
+</script>
+
 
 </footer>
  </div>
