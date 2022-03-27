@@ -108,10 +108,6 @@
     });
 </script>
 
-
-
-
-
 </footer>
  </div>
 </body>
@@ -235,43 +231,31 @@
             </div>
         </div>
     </nav>
-        {% block content %}
-        {% endblock %}
     </div>
 
 <!-----------------------------------FOOTER----------------------------------->
  <div class="container">
         <footer class="d-flex justify-content-between align-items-center py-3 my-4 border-top">
-            <p class="col-md-5 mb-1 verylightgrey">&copy; {{ year }} Oun Muhammad / Environment: {{ deployment_environment
-                }}</p>
-
-            <a href="/"
-               class="col-md-2 d-flex align-items-center mb-2 mb-md-0 me-md-auto text-decoration-none">
-                <svg class="bi me-2" width="38" height="38">
-                    <img src="/static/images/logo1.png" height="38" width="38">
-                </svg>
-            </a>
-            <ul class="nav col-md-5 justify-content-end verylightgrey">
-                <li class="nav-item"><a href="/" class="nav-link px-2 verylightgrey">Home</a></li>
-                <li class="nav-item"><a href="/page1" class="nav-link px-2 verylightgrey">GitHub</a></li>
-                <li class="nav-item"><a href="/page2" class="nav-link px-2 verylightgrey">Docker</a></li>
-                <li class="nav-item"><a href="/page3" class="nav-link px-2 verylightgrey">Python/Flask</a></li>
-                <li class="nav-item"><a href="/page4" class="nav-link px-2 verylightgrey">CI/CD</a></li>
-                <li class="nav-item"><a href="/about" class="nav-link px-2 verylightgrey">About</a></li>
-            </ul>
-
-
-    <!-- <footer>
-        Environment: {{ deployment_environment }} - Copyright: {{ year }}
-        Message: {{ mymessage }} {{ format_price(100) }}
-    </footer> -->
-
+            <p class="col-md-5 mb-1 verylightgrey">&copy; {{ year }} Oun Muhammad / Environment: {{ deployment_environment }}</p>
+            <p>E-mail: om9@njit.edu</p>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+            <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+    $(function(){
+        $('a').each(function(){
+            if ($(this).prop('href') === window.location.href) {
+                $(this).addClass('active'); $(this).parents('li').addClass('active');
+            }
+        });
+    });
+</script>
 
 </footer>
  </div>
