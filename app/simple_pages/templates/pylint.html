@@ -1,0 +1,324 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <img src="{{ url_for('static', filename='images/testsbanner.png') }}" class="img-fluid" alt="testsbanner">
+
+
+    <div class="container-fluid">
+        <h4 class="neonblue mt-4"><u>What is Pytest?</u></h4>️ ️
+        <p class="fs-20 mt--2"><span class="fs-4">P</span>ytest is the framework that makes it easy to write, test, and
+            scale
+            to support complex testing for the applications and libraries. It is the most popular Python package for
+            testing. The basis for a rich ecosystem of testing is plugins and extensions.
+
+            The way pytest is designed is as a very extensible system, easy to write plugins and there are a lot of
+            plugins present in the pytest that are used for various purposes. Testing is very important before
+            delivering the code in production.</p>
+
+        <div class="row align-item-start">
+            <div class="col-5">
+                <h5>Features Of pytest</h5>
+                <li>
+                    Does not require API to use.
+                </li>
+                <li>
+                    Can be used to run doc tests and unit tests.
+                </li>
+                <li>
+                    Gives useful failuråe information without the use of debuggers.
+                </li>
+                <li>
+                    Can be written as a function or method.
+                </li>
+                <li>
+                    Has useful plugins.
+                </li>
+                <h5 class="mt-3">Advantages Of pytest</h5>
+                <li>
+                    It is open-source.
+                </li>
+                <li>
+                    It can skip tests and automatically detect the tests.
+                </li>
+                <li>
+                    Tests are run parallel.
+                </li>
+                <li>
+                    Specific tests and subsets of tests can be run from the program.
+                </li>
+                <li>
+                    It is easy to start with as it has a very easy syntax.
+                </li>
+
+            </div>
+            <div class="col-7"><img src="{{ url_for('static', filename='images/passedpytest.png') }}"
+                                    class="img-fluid" alt="passedpytest" id="zoomA">
+                <p class="fs-14"><em>Figure 1 This is screenshot of successfully ran pytest on calculator project as
+                    well as simple pages included in this git</em></p>
+            </div>
+            <div class="row mt-4">
+                <div class="col-7">
+                    <h4 class="neonblue"><u>How to run Pytest?</u></h4>
+                    <p class="fs-20"> There are few way to run pytest. First of all it should be installed on your
+                        machine.
+                        This can be done by running command </p>
+                    <ul class="list-unstyled">
+                        <li><span class="offwhite">pip install -U pytest</span></li>
+                    </ul>
+                    <p class="fs-20"> Now you can check what version of pytest is installed and if it is compatible with
+                        your version of Python by running a command</p>
+                    </li>
+                    <ul class="list-unstyled">
+                        <li><span class="offwhite">$ pytest --version</span></li>
+                    </ul>
+                    <p class="fs-20">Now we can proceed to run a test by running a command</p>
+                    <ul class="list-unstyled">
+                        <li><span class="offwhite"> python -m pytest</span></li>
+                    </ul>
+                    <p class="fs-20">Another way to run pytest when using Pycharm is to use play button in top bar on
+                        the
+                        right-hand side. the options are to run a test, to debug or run a test with coverage which I
+                        will soon
+                        discuss. Figure 2 shows those buttons.</p>
+                    <p class="fs-20">In our case however, the git we are working with to build this site as well as
+                        calculator
+                        program includes docker container that includes all necessary thing we need for the purpose of
+                        this
+                        exercise. That means we can skip and install and as long as our docker container is running, and
+                        we are
+                        using an interpreter from that container we can simply use this command</p>
+                    <ul class="list-unstyled">
+                        <li><span class="offwhite">pytest</span></li>
+                    </ul>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-4 mt-4">
+                    <img src="{{ url_for('static', filename='images/playbutton.png') }}"
+                         class="img-responsive right-block d-block mx-auto" alt="playbutton" id="zoomA">
+                    <p class="fs-14"><em>Figure 2 These buttons provide one of the options to run pytest from
+                        Pycharm</em></p>
+                    <img src="{{ url_for('static', filename='images/pytestversion.png') }}"
+                         class="img-fluid" alt="pytestversion" id="zoomA">
+                    <p class="fs-14"><em>Figure 3 Pytest version shows after running pytest --version command</em></p>
+                </div>
+
+                <h1 class="b1"></h1>
+                <h4 class="neonblue mt-3"><u>What is Pylint?</u></h4>️ ️
+                <p class="fs-20"><span class="fs-4">P</span>ylint is a tool that checks for errors in Python code, tries
+                    to
+                    enforce a coding standard and looks for code
+                    smells. It can also look for certain type errors, it can recommend suggestions about how particular
+                    blocks
+                    can
+                    be refactored and can offer you details about the code's complexity. Figures 4 and 5 below show
+                    both, failed and successful pylint test outputs which I performed during creating this project</p>
+
+                <h4 class="neonblue mt-3"><u>How to Run Pylint in Pycharm?</u></h4>
+                <div class="row aling-items-start">
+                    <div class="col-6">
+                        <p class="fs-20"><span class="fs-4">P</span>ylint can be installed using traditional way by
+                            running command in terminal</p>
+                        <ul class="list-unstyled">
+                            <li><span class="offwhite">pip install pylint</span></li>
+                        </ul>
+                        <p class="fs-20">Another way to integrate it in PyCharm is:</p>
+                        <ul class="list-unstyled indent">
+                            <li> 1. Go to Preferences > Plugins > Browse repositories...</li>
+
+                            <li>2. Right-click on the plugin named Pylint, select Download and Install and restart
+                                PyCharm
+                                when
+                                prompted
+                            </li>
+                        </ul>
+
+
+                        <p class="fs-20">If the plugin is not finding the Pylint executable (e.g. is not inside the PATH
+                            environmental
+                            variable), you can specify it manually using the plugin settings:</p>
+                        <ul class="list-unstyled indent">
+                            <li>1. Preferences > Other Settings > Pylint or simply click the gear icon from the side bar
+                                of
+                                the
+                                Pylint tool window
+                            </li>
+
+                            <li>2. Type the path directly or use the Browse button to open a file selection dialog</li>
+
+                            <li>3. Press the Test button to check if the plugin is able to run the executable</li>
+                        </ul>
+                        <p class="fs-20">In our program using docker container we can run pylint test using command:</p>
+                        <ul class="list-unstyled">
+                            <li><span class="offwhite">pytest --pylint</span></li>
+                        </ul>
+                        <p class="fs-20">Pylint has an advanced message control for its checks, offering the ability to
+                            enable / disable a
+                            message either from the command line or from the configuration file, as well as from the
+                            code
+                            itself. Figure 6 shows examples of <em>pylint disable</em> message used in calculator
+                            program</p>
+                    </div>
+
+
+                    <div class="col-6">
+                        <img src="{{ url_for('static', filename='images/pylintfail.png') }}"
+                             class="img-fluid" alt="pylintfail" id="zoomA">
+                        <p class="fs-14"><em>Figure 4 Results of failed pylint test</em></p>
+                        <img src="{{ url_for('static', filename='images/pylintpass.png') }}"
+                             class="img-fluid" alt="pylintpass" id="zoomA">
+                        <p class="fs-14"><em>Figure 5 Results of successfully passed pylint test</em></p>
+                        <img src="{{ url_for('static', filename='images/pylintdisable.png') }}"
+                             class="img-fluid" alt="pylintdisable" id="zoomA">
+                        <p class="fs-14"><em>Figure 6 The use of pylint disable message</em></p>
+                    </div>
+
+                    <h1 class="b1"></h1>
+                    <h4 class="neonblue mt-3"><u>What is Coverage?</u></h4>
+                    <p class="fs-20"><span class="fs-4">C</span>overage is a tool for measuring code coverage of
+                        Python programs. It monitors your program,
+                        noting which parts of the code have been executed, then analyzes the source to identify code
+                        that
+                        could have been executed but was not.
+
+                        Coverage measurement is typically used to gauge the effectiveness of tests. It can show which
+                        parts
+                        of your code are being exercised by tests, and which are not.</p>
+                </div>
+
+
+                <div class="row align-items-start">
+                    <div class="col-6">
+                        <h5>Capabilities</h5>
+                        <p class="fs-20">
+                        <p class="fs-20">Coverage can do a number of things:</p>
+                        <ul class="list-unstyled indent">
+                            <li>1. By default it will measure line (statement) coverage.
+                            </li>
+
+                            <li>2. It can also measure branch coverage.</li>
+
+                            <li>3. It can tell you what tests ran which lines.</li>
+                            <li>4. It can produce reports in a number of formats: text, HTML, XML, LCOV, and JSON.</li>
+                            <li>5. For advanced uses, there’s an API, and the result data is available in a SQLite
+                                database.
+                            </li>
+                        </ul>
+                        <h5>How to use coverage</h5>
+                        <p class="fs-20">To start install coverage by using command</p>
+                        <ul class="list-unstyled">
+                            <li><span class="offwhite">pip install coverage</span></li>
+                        </ul>
+                        <p class="fs-20">Next we can run coverage with command</p>
+                        <ul class="list-unstyled">
+                            <li><span class="offwhite">coverage run</span> or <span
+                                    class="offwhite">python -m coverage</span></li>
+                        </ul>
+                        <p class="fs-20">Or if using pytest plugin (this project)</p>
+                        <ul class="list-unstyled">
+                            <li><span class="offwhite">pytest -cov</span> or <span class="offwhite">pytest --cov</span>
+                            </li>
+                        </ul>
+
+                        <p class="fs-20"> to run coverage and generate general report in terminal screen (Figure 6)</p>
+
+                        <p class="fs-20">To get more detailed report we can run</p>
+                        <ul class="list-unstyled">
+                            <li><span class="offwhite">coverage html</span></li>
+
+                        </ul>
+                        <p class="fs-20">Which will generate folder with html files for each module (Figures 7 and 8)
+                            which can be opened in local host as shown.</p>
+                        <p class="fs-20">Both screenshots, Fig 8 and Fig 9 were taken before corrections were made hence
+                            different output than Fig 7.</p>
+                        <p class="fs-20">We should always aim for 100% coverage, however often it is not necessary and
+                            may consume a lot of time and resources. Not achieving 100% does not mean code is not good.
+                            Critical missed lines should always be addressed. Good judgment on what to put time into is
+                            critical in this test.</p>
+                    </div>
+
+                    ️
+
+
+                    <div class="col-6">
+                        <img src="{{ url_for('static', filename='images/coveragereport99.png') }}"
+                             class="img-fluid" alt="coveragereport99" id="zoomA">
+                        <p class="fs-14"><em>Figure 7 The use of pylint disable message</em></p>
+
+                        <img src="{{ url_for('static', filename='images/covindex.png') }}"
+                             class="img-fluid" alt="covindex" id="zoomA">
+                        <p class="fs-14"><em>Figure 8 Index page of coverage html report</em></p>
+
+                        <img src="{{ url_for('static', filename='images/covexamp.png') }}"
+                             class="img-fluid" alt="covexamp" id="zoomA">
+                        <p class="fs-14"><em>Figure 9 Module opened with html coverage report</em></p>
+                    </div>
+
+                </div>
+                <h1 class="b1"></h1>
+                <h4 class="neonblue mt-3"><u>What is Unittest?</u></h4>
+                <p class="fs-20">Unit testing is a software testing method by which individual units of source code
+                    are put under various tests to determine whether they are fit for use (Source). It determines
+                    and ascertains the quality of your code.</p>
+                <div class="row">
+                    <div class="col-8">
+                        <p class="fs-20"> Generally, when the development process is complete, the developer codes
+                            criteria, or the
+                            results that are known to be potentially practical and useful, into the test script to
+                            verify a
+                            particular unit's correctness. During test case execution, various frameworks log tests that
+                            fail any criterion and report them in a summary.
+
+                            The developers are expected to write automated test scripts, which ensures that each and
+                            every
+                            section or a unit meets its design and behaves as expected.
+
+                            Though writing manual tests for your code is definitely a tedious and time-consuming task,
+                            Python's built-in unit testing framework has made life a lot easier.
+
+                            The unit test framework in Python is called unittest, which comes packaged with Python.
+
+                            Unit testing makes your code future proof since you anticipate the cases where your code
+                            could
+                            potentially fail or produce a bug. Though you cannot predict all of the cases, you still
+                            address
+                            most of them.</p>
+                    </div>
+                    <div class="col-4">
+                        <img src="{{ url_for('static', filename='images/unittest1.png') }}"
+                             class="img-fluid" alt="unittest1">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+
+    </div>
+
+    <div class="container py-5">
+        <p class="fs-14">Resources:
+        <ul class="fs-14">
+            <li>
+                <a href="https://www.softwaretestinghelp.com/pytest-tutorial/#:~:text=Python%20offers%20three%20types%20of%20testing%3A%201%20Unittest%3A,it%20easy%20to%20write%20test%20cases%20in%20Python.
+"
+                   class="card-link darkgrey" target="_blank">Pytest</a>
+            </li>
+            <li>
+                <a href="https://pylint.pycqa.org/en/latest/"
+                   class="card-link darkgrey" target="_blank">Pylint</a>
+            </li>
+            <li>
+                <a href="https://coverage.readthedocs.io/en/6.3.2/"
+                   class="card-link darkgrey" target="_blank">Coverage</a>
+            </li>
+            <li>
+                <a href="https://www.datacamp.com/community/tutorials/unit-testing-python"
+                   class="card-link darkgrey" target="_blank">Unit test</a>
+            </li>
+        </ul>
+    </div>
+
+    </div></div>
+
+{% endblock %}
