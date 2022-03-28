@@ -1,31 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
-    <img src="{{ url_for('static', filename='images/SOLIDbanner.png') }}" class="img-fluid" alt="SOLIDbanner">
+    <h3 class="neonblue mt-4"><u>SOLID Principles</u></h3>️
+    <p class="fs-20">
+        The SOLID Principles are five principles of Object-Oriented class design.
+        They are a set of rules and best practices to follow while designing a class structure.
+        These five principles help us understand the need for certain design patterns and software architecture in
+        general.
+        So I believe that it is a topic that every developer should learn.
+    </p>
+    <li>
+        <ol>The Single Responsibility Principle</ol>
+        <ol>The Open-Closed Principle</ol>
+        <ol>The Liskov Substitution Principle</ol>
+        <ol>The Interface Segregation Principle</ol>
+        <ol>The Dependency Inversion Principle</ol>
+    </li>
+
     <div class="row align-items-center">
-        <div class="col-6 py-4">
-            <img src="{{ url_for('static', filename='images/s.png') }}"
-                 class="img-fluid"
-                 alt="s">
-        </div>
-        <div class="col-6 py-4">
-            <p class="fs-20">Each class shall be responsible for only one single concept. In calculator, classes such as
-                addition, subtraction, multiplication and division all have one and only one function.
-                In other words, every component of your code (in general a class, but also a function) should have one
-                and only one responsibility. As a consequence of that, there should be only a reason to change it.
+        <div class="col-8 py-4">
+            <p class="fs-20">
+            <h4>Single Responsibility Principle</h4>
+            The Single Responsibility Principle states that a class should do one thing and therefore
+            A class should have one and only one reason to change, meaning that a class should have only one job.
+            For Example In calculator, classes such as addition, subtraction, multiplication and division can be
+            handeled by one function.
 
             </p>
-        </div>
-    </div>
-
-    <div class="row align-items-center">
-        <h1 class="b1 pt-5"></h1>
-
-        <div class="col-6 pb-4">
-            <img src="{{ url_for('static', filename='images/o.png') }}"
-                 class="img-fluid"
-                 alt="o">
-        </div>
-        <div class="col-6 pb-4">
+            <h4>Open-Closed Principle</h4>
             <p class="fs-20">You should not need to modify the code you have already written to accommodate new
                 functionality, but simply add what you now need. If we were to add new function to our calculator
                 for example square root, we only need to add Squareroot class that will automatically inherit from
@@ -35,17 +36,7 @@
                 The result is a very flexible class, that requires minimum time to be maintained.
 
             </p>
-        </div>
-    </div>
-
-    <div class="row align-items-center">
-        <h1 class="b1 pt-5"></h1>
-        <div class="col-6 pb-4">
-            <img src="{{ url_for('static', filename='images/l.png') }}"
-                 class="img-fluid"
-                 alt="l">
-        </div>
-        <div class="col-6 pb-4">
+            <h4>Liskov Substitution Principle</h4>
             <p class="fs-20">If a subclass redefines a function also present in the parent class, a client-user
                 should not be noticing any difference in behaviour, and it is a substitute for the base class.
                 For example, if you are using a function and your colleague change the base class, you should
@@ -59,18 +50,7 @@
                 parent.
 
             </p>
-        </div>
-    </div>
-
-
-    <div class="row align-items-center">
-        <h1 class="b1 pt-5"></h1>
-        <div class="col-6 pb-4">
-            <img src="{{ url_for('static', filename='images/i.png') }}"
-                 class="img-fluid"
-                 alt="i">
-        </div>
-        <div class="col-6 pb-4">
+            <h4>Interface Segregation Principle</h4>
             <p class="fs-20">In the contest of classes, an interface is considered, all the methods and
                 properties “exposed”, thus, everything that a user can interact with that belongs to that
                 class.
@@ -79,17 +59,7 @@
                 This problem arises, primarily, when, a subclass inherits methods from a base class that it
                 does not need.
             </p>
-        </div>
-    </div>
-
-    <div class="row align-items-center">
-        <h1 class="b1 pt-5"></h1>
-        <div class="col-6 pb-4">
-            <img src="{{ url_for('static', filename='images/d.png') }}"
-                 class="img-fluid"
-                 alt="d">
-        </div>
-        <div class="col-6 pb-4">
+            <h4>Dependency Inversion Principle</h4>
             <p class="fs-20">Dependency should be on abstractions not concretions. High-level modules
                 should not depend upon low-level modules. Both low and high level classes should depend
                 on the same abstractions. Abstractions should not depend on details. Details should
@@ -99,170 +69,85 @@
                 class that they fall under.
             </p>
         </div>
-    </div>
 
 
+        <h3 class="neonblue mt-4"><u>Design Patters</u></h3>️ ️
+        <div class="row align-items-start">
+            <div class="col-8">
+                <p class="fs-20">
+                    Design patterns represent the best practices used by experienced object-oriented software
+                    developers. Design patterns are solutions to general problems that software developers faced during
+                    software development. These solutions were obtained by trial and error by numerous software
+                    developers over quite a substantial period of time. Design patterns provide a standard terminology
+                    and are specific to particular scenario. For example, a singleton design pattern signifies use of
+                    single object so all developers familiar with single design pattern will make use of single object
+                    and they can tell each other that program is following a singleton pattern.
+                <h4>Creational Patterns</h4>
+                Provide an interface for creating families of related or dependent objects without specifying their
+                concrete classes.
+                Separate the construction of a complex object from its representation, allowing the same construction
+                process to create various representations.
+                A class accepts the objects it requires from an injector instead of creating the objects directly.
+                Define an interface for creating a single object, but let subclasses decide which class to instantiate.
+                Factory Method lets a class defer instantiation to subclasses.
+                Ensure a class has only named instances, and provide a global point of access to them.
+                Specify the kinds of objects to create using a prototypical instance, and create new objects from the
+                'skeleton' of an existing object, thus boosting performance and keeping memory footprints to a minimum.
+                <h4>Structural Patterns</h4>
+                Convert the interface of a class into another interface clients expect. An adapter lets classes work
+                together that could not otherwise because of incompatible interfaces. The enterprise integration pattern
+                equivalent is the translator.
+                Decouple an abstraction from its implementation allowing the two to vary independently.
+                Composite Compose objects into tree structures to represent part-whole hierarchies. Composite lets
+                clients treat individual objects and compositions of objects uniformly.
+                Decorator Attach additional responsibilities to an object dynamically keeping the same interface.
+                Decorators provide a flexible alternative to subclassing for extending functionality.
+                Facade Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level
+                interface that makes the subsystem easier to use.
+                Flyweight Use sharing to support large numbers of similar objects efficiently.
+                <h4>Behavioral Patterns</h4>
+                Artificial intelligence pattern for combining disparate sources of data
+                Chain of responsibility Avoid coupling the sender of a request to its receiver by giving more than one
+                object a chance to handle the request. Chain the receiving objects and pass the request along the chain
+                until an object handles it.
+                Command Encapsulate a request as an object, thereby allowing for the parameterization of clients with
+                different requests, and the queuing or logging of requests. It also allows for the support of undoable
+                operations.
+                Interpreter Given a language, define a representation for its grammar along with an interpreter that
+                uses the representation to interpret sentences in the language.
+                Iterator Provide a way to access the elements of an aggregate object sequentially without exposing its
+                underlying representation.
+                Mediator Define an object that encapsulates how a set of objects interact. Mediator promotes loose
+                coupling by keeping objects from referring to each other explicitly, and it allows their interaction to
+                vary independently.
+                Memento Without violating encapsulation, capture and externalize an object's internal state allowing the
+                object to be restored to this state later.
+                Null object Avoid null references by providing a default object.
 
-    <h1 class="b2 pt-5"></h1>
-    <h4 class="neonblue mt-4"><u>Design Patters</u></h4>️ ️
-    <div class="row align-items-start">
-        <div class="col-8">
-            <p class="fs-20">
-                <span class="fs-3">I</span>n software engineering, a design pattern is a general repeatable solution to
-                a
-                commonly occurring problem
-                in software design. A design pattern isn't a finished design that can be transformed directly into code.
-                It
-                is a description or template for how to solve a problem that can be used in many different situations.
-                Design patterns are typical solutions to commonly occurring problems in software design. They are like
-                pre-made blueprints that you can customize to solve a recurring design problem in your code.
-
-                You can’t just find a pattern and copy it into your program, the way you can with off-the-shelf
-                functions or
-                libraries. The pattern is not a specific piece of code, but a general concept for solving a particular
-                problem. You can follow the pattern details and implement a solution that suits the realities of your
-                own
-                program.
-
-                Patterns are often confused with algorithms, because both concepts describe typical solutions to some
-                known
-                problems. While an algorithm always defines a clear set of actions that can achieve some goal, a pattern
-                is
-                a more high-level description of a solution. The code of the same pattern applied to two different
-                programs
-                may be different.
-
-                An analogy to an algorithm is a cooking recipe: both have clear steps to achieve a goal. On the other
-                hand,
-                a pattern is more like a blueprint: you can see what the result and its features are, but the exact
-                order of
-                implementation is up to you.
-            </p>
+                </p>
+            </div>
+            <div class="col-4 py-4">
+                <img src="{{ url_for('static', filename='images/designpat.png') }}"
+                     class="img-fluid"
+                     alt="designpat">
+            </div>
         </div>
-        <div class="col-4 py-4">
-            <img src="{{ url_for('static', filename='images/designpat.png') }}"
-                 class="img-fluid"
-                 alt="designpat">
-        </div>
-    </div>
-    <h1 class="b1"></h1>
-    <div class="row justify-content-center py-4">
-        <div class="col-2"></div>
-        <div class="col-8">
-            <img src="{{ url_for('static', filename='images/typesofpatterns.png') }}"
-                 class="img-fluid"
-                 alt="typesofpatterns">
-        </div>
-        <div class="col-2"></div>
-    </div>
-    <h1 class="b1"></h1>
-    <div class="row align-items-start">
-        <div class="col-4 py-4">
-            <img src="{{ url_for('static', filename='images/beh.png') }}"
-                 class="img-fluid"
-                 alt="beh">
-        </div>
-        <div class="col-8">
-            <h4 class="neonblue mt-4"><u>Behavioral Patterns</u></h4>️ ️
-            <p class="fs-20">
-                <span class="fs-3">B</span>ehavioral patterns describe interactions between objects and focus on how
-                objects communicate with each other. They can reduce complex flow charts to mere interconnections
-                between
-                objects of various classes. Behavioral patterns are also used to make the algorithm that a class uses
-                simply
-                another parameter that is adjustable at runtime. Behavioral patterns are concerned with algorithms and
-                the
-                assignment of responsibilities between objects. Behavioral patterns describe not just patterns of
-                objects or
-                classes but also the patterns of communication between them.
-                These patterns characterize complex control flow that is difficult to follow at run-time. They shift
-                your
-                focus away from the flow of control to let you concentrate just on the way objects are interconnected.
-                Behavioral class patterns use inheritance to distribute behavior between classes.
-                The Template Method is the simpler and more common of the two. A template method is an abstract
-                definition
-                of an algorithm. It defines the algorithm step by step. Each step invokes either an abstract operation
-                or a
-                primitive operation. A subclass fleshes out the algorithm by defining the abstract operations. The other
-                behavioral class pattern is Interpreter pattern, which represents a grammar as a class hierarchy and
-                implements an interpreter as an operation on instances of these classes.
-            </p>
-        </div>
-    </div>
-    <h1 class="b1"></h1>
-    <div class="row align-items-start">
-        <div class="col-4 py-4">
-            <img src="{{ url_for('static', filename='images/createpat.png') }}"
-                 class="img-fluid"
-                 alt="createpat">
-        </div>
-        <div class="col-8">
-            <h4 class="neonblue mt-4"><u>Creational Patterns</u></h4>️ ️
-            <p class="fs-20">
-                <span class="fs-3">C</span>reational patterns are used to create objects for a suitable class that
-                serves as a solution for a problem. Generally when instances of several different classes are available.
-                They are particularly useful when you are taking advantage of polymorphism and need to choose between
-                different classes at runtime rather than compile time.
-
-                Creational patterns support the creation of objects in a system. Creational patterns allow objects to be
-                created in a system without having to identify a specific class type in the code, so you do not have to
-                write large, complex code to instantiate an object. It does this by having the subclass of the class
-                create the objects. However, this can limit the type or number of objects that can be created within a
-                system.
-            </p>
-        </div>
-    </div>
-    <h1 class="b1"></h1>
-    <div class="row align-items-start">
-        <div class="col-4 py-4">
-            <img src="{{ url_for('static', filename='images/structpattern.png') }}"
-                 class="img-fluid"
-                 alt="structpattern">
-        </div>
-        <div class="col-8">
-            <h4 class="neonblue mt-4"><u>Structural Patterns</u></h4>️ ️
-            <p class="fs-20">
-                <span class="fs-3">S</span>tructural patterns form larger structures from individual parts, generally
-                of different classes.
-                Structural patterns vary a great deal depending on what sort of structure is being created for what
-                purpose.
-
-                Structural patterns are concerned with how classes and objects are composed to form larger structures.
-                Structural class patterns use inheritance to compose interfaces or implementations. As a simple example,
-                consider how multiple inheritance mixes two or more classes into one. The result is a class that
-                combines the properties of its parent classes. This pattern is particularly useful for making
-                independently developed class libraries work together.
-                Another example is the class form of the Adapter Pattern.
-                In general, an adapter makes one interface (the adaptee's) conform to another, thereby providing a
-                uniform abstraction of different interfaces. A class adapter accomplishes this by inheriting privately
-                from an adaptee class. The adapter then expresses its interface in terms of the adaptee's.
-            </p>
-        </div>
-    </div>
 
 
+        <h1 class="b1 pt-5"></h1>
+        <p class="fs-14">Resources:
+        <ul class="fs-14">
+            <li>
+                <a href="https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/"
+                   class="card-link darkgrey" target="_blank">SOLID</a>
+            </li>
 
-    <h1 class="b1 pt-5"></h1>
-    <p class="fs-14">Resources:
-    <ul class="fs-14">
-        <li>
-            <a href="https://towardsdatascience.com/solid-coding-in-python-1281392a6a94"
-               class="card-link darkgrey" target="_blank">SOLID</a>
-        </li>
-        <li>
-            <a href="https://levelup.gitconnected.com/s-o-l-i-d-principles-explained-in-python-with-examples-83b2b43bdcde"
-               class="card-link darkgrey" target="_blank">Dependency Inversion</a>
-        </li>
-        <li>
-            <a href="https://refactoring.guru/design-patterns/what-is-pattern"
-               class="card-link darkgrey" target="_blank">Design Patterns</a>
-        </li>
-        <li>
-            <a href="https://www.gofpatterns.com/design-patterns/module2/three-types-design-patterns.php"
-               class="card-link darkgrey" target="_blank">Design Patterns</a>
-        </li>
+            <li>
+                <a href="https://www.tutorialspoint.com/design_pattern/design_pattern_overview.htm"
+                   class="card-link darkgrey" target="_blank">Design Patterns</a>
+            </li>
 
-    </ul>
+        </ul>
     </div>
     </div>
 {% endblock %}
