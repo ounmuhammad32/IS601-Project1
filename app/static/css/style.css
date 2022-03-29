@@ -166,3 +166,7 @@ ul {
     background-color: #808080;
 
 }
+.active {
+     color: #7d7f81 !important;
+    background-color: #7d7f81;
+}
