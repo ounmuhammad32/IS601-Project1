@@ -1,16 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-
-
     <h3><strong>Implementing Pylint and Glossary</strong></h3>
 
 <section>
 
          <div class="row align-items-center">
         <div class="col-9 py-4">
-                <h2><u><strong>Pylint Manual</strong></u></h2>
+                <h5><u><strong>Pylint Manual</strong></u></h5>
                 <p>Pylint is a tool that checks for errors in your Python code. It analyzes your code and compares it to the coding standard. If you are coding in Python, the computer does not catch bugs for you.
                     Therefore, you need a lint tool, like Pylint, to find errors.</p>
                 <p>The default coding style used by Pylint is similar to PEP 8.</p>
@@ -43,14 +40,14 @@
                 </p>
             </div>
             <div class="col-3 py-4">
-            <img src="{{ url_for('static', filename='images/solid.png') }}"
+            <img src="{{ url_for('static', filename='images/py.gif') }}"
                  class="img-fluid"
                  alt="designpat">
             </div>
         </div>
         <div class="row align-items-center">
         <div class="col-8 py-4">
-                <h2><u><strong>Glossary:</strong></u></h2>
+                <h5><u><strong>Glossary:</strong></u></h5>
                 <p><strong>Attribute:</strong> attr() , creates attributes on class instances inside methods. </p>
                 <p><strong>Class Method:</strong> means that it is bound to the class and not the object of the class. This is useful for when we need to access the class itself and not the object. Class method can change a class state that would apply across all the instances of a class. </p>
                 <p><strong>Class:</strong> is a code template for creating objects. In Python, a class is created by using the keyword "class".</p>
@@ -70,7 +67,7 @@
                 <p><strong>Unit Test :</strong> is  the first level of software testing. This guarantees that some change in the code won’t affect the code that is running without errors.</p>
             </div>
             <div class="col-4 py-4">
-            <img src="{{ url_for('static', filename='images/solid.png') }}"
+            <img src="{{ url_for('static', filename='images/py1.png') }}"
                  class="img-fluid"
                  alt="designpat">
         </div>
