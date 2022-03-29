@@ -1,33 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
-
-    <img src="{{ url_for('static', filename='images/AAAbanner.png') }}" class="img-fluid" alt="AAAbanner">
-
     <div class="container-fluid py-3">
         <h4 class="neonblue"><u>What is AAA testing?</u></h4>️ ️
-        <p class="fs-20"><span class="fs-4">T</span>he AAA pattern is a pattern for structuring tests. It breaks each
-            test down into three parts – Arrange, Act, and Assert – where each part is a step leading to the next. The
-            arrange step sets up the test’s input values. The act step prompts the primary function being tested. And
-            finally, the assert step verifies that the output of the function is what was expected.
-
-            In other words, each step in the pattern is a function whose return value is the input of the following
-            step.</p>
+        <p><strong>AAA Testing,</strong> also known as <strong> Arrange-Act-Assert,</strong>is a great way to
+            structure test cases. It describes the order of operations that need to be performed to write a good
+            test.
+            AAA Testing represents a recognizable test template following the A-A-A pattern of testing. The
+            pattern focuses each test on a single action. By applying AAA, you can ensure that your test is
+            clear and more understandable and manageable. </p>
+        <p>For more information on AAA Testing, please read the article <a
+                href="https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/"
+                target="_blank"> <i>Arrange-Act-Assert</i></a></p>
         <div class="row align items">
             <div class="col-8">
                 <h5 class="neonblue">Arrange</h5>
-                <p class="fs-20"><span class="fs-4">T</span>he block of code that sets up the conditions for the test
-                    action.</p>
-                <p class="fs-20">Guidelines</p>
-                <ul>
-                    <li>Use a single block of code with no empty lines.</li>
-                    <li>Do not use assert in the Arrange block. If you need to make an assertion about your arrangement,
-                        then
-                        this is a smell that your arrangement is too complicated and should be extracted to a fixture or
-                        setup
-                        function and tested in its own right.
-                    </li>
-                    <li>Only prepare non-deterministic results not available after action.</li>
-                </ul>
+                This is the first step of a unit test application. Here we will arrange the test, in other words we will
+                do the necessary setup of the test. For example, to perform the test we need to create an object of the
+                targeted class, if necessary, then we need to create mock objects and other variable initialization,
+                something like this.
             </div>
             <div class="col-4"><img src="{{ url_for('static', filename='images/aaa1.png') }}" class="img-fluid"
                                     alt="aaa1"></div>
@@ -36,35 +26,13 @@
         <div class="row align-items">
             <div class="col-5 mb-5">
                 <h5 class="neonblue">Act</h5>
-                <p class="fs-20"><span class="fs-4">T</span>he line of code where the Action is taken on the SUT.</p>
-                <p class="fs-20">Guidelines</p>
-                <ul>
-                    <li>Start every Action line with result =.
-
-                        This makes it easier to distinguish test actions and means you can avoid the hardest job in
-                        programming:
-                        naming. When every result is called result, then you do not need to waste brain power wondering
-                        if it
-                        should be item = or response = etc. An added benefit is that you can find test actions easily
-                        with a
-                        tool like grep.
-                    </li>
-                    <li>Even when there is no result from the action, capture it with result = and then assert result is
-                        None.
-                        In this way, the SUT’s behaviour is pinned.
-                    </li>
-                    <li>If you struggle to write a single line action, then consider extracting some of that code into
-                        your
-                        arrangement.
-                    </li>
-                    <li>The action can be wrapped in with ... raises for expected exceptions. In this case your action
-                        will be
-                        two lines surrounded by empty lines.
-                    </li>
-                </ul>
+                This is the middle step of a unit step application. In this step we will execute the test. In other
+                words we will do the actual unit testing and the result will be obtained from the test application.
+                Basically we will call the targeted function in this step using the object that we created in the
+                previous step.
             </div>
 
-            <div class="col-7"><img src="{{ url_for('static', filename='images/aaatest.png') }}"
+            <div class="col-7"><img src="{{ url_for('static', filename='images/aaa2.png') }}"
                                     class="img-fluid mt-5 mb-2"
                                     alt="aaa" id="zoomA">
 
@@ -75,47 +43,25 @@
                 <div class="col-7">
 
                     <h5 class="neonblue">Assert</h5>
-                    <p class="fs-20"><span class="fs-4">T</span>he block of code that performs the assertions on the
-                        state
-                        of the SUT after the
-                        action.</p>
-                    <p class="fs-20">Guidelines</p>
-                    <ul>
-                        <li>Use a single block of code with no empty lines.
-
-
-                        </li>
-                        <li>First test result, then side effects.
-                        </li>
-                        <li>Limit the actions that you make in this block. Ideally, no actions should happen, but that
-                            is
-                            not always
-                            possible.
-                        </li>
-                        <li>Use simple blocks of assertions. If you find that you are repeatedly writing the same code
-                            to
-                            extract
-                            information from the SUT and perform assertions on it, then consider extracting an assertion
-                            helper.
-                        </li>
-                    </ul>
+                    This is the last step of a unit test application. In this step we will check and verify the returned
+                    result with expected results.
                 </div>
                 <div class="col-5">
-                    <img src="{{ url_for('static', filename='images/aaa4.png') }}"
+                    <img src="{{ url_for('static', filename='images/aaa3.png') }}"
                          class="img-fluid mb-2"
-                         alt="aaa4">
+                         alt="aaa3">
                 </div>
                 <h1 class="b1"></h1>
                 <h4 class="neonblue"><u>Why is testing important???</u></h4>
 
-                <p class="fs-20"><span class="fs-4">G</span>oal of python testing is to detect as many bugs and
+                <p class="fs-20">Goal of python testing is to detect as many bugs and
                     inconsistencies in the infancy of
                     the application development as possible. As software scales in codebase size, it's impossible for a
                     person or even a large team to keep up with all of the changes and the interactions between the
                     changes. This is achieved by designing and scripting accurate and
                     quality unit tests that can also serve as detailed documentation for the development process.</p>
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-8">
                         <p class="fs-20"> This
                             ensures that bugs and other problems we catch in the first stages of the development, can be
                             fixed by
@@ -138,7 +84,7 @@
                             application at the same time is known as integration testing. User interface testing ensures
                             the
                             correctness of how a user would interact with the software.</p></div>
-                    <div class="col-6"><img src="{{ url_for('static', filename='images/testingpy.png') }}"
+                    <div class="col-4"><img src="{{ url_for('static', filename='images/aaa4.png') }}"
                                             class="img-fluid mb-2"
                                             alt="aaa"></div>
                 </div>
@@ -149,22 +95,19 @@
         </div>
         <div class="fs-14 mt-5">
             <p class>Resources:
-            <li>
-                <a href="https://developers.mews.com/aaa-pattern-a-functional-approach/"
+
+                <a href="https://www.c-sharpcorner.com/UploadFile/dacca2/fundamental-of-unit-testing-understand-aaa-in-unit-testing/"
                    class="card-link darkgrey" target="_blank">AAA patern</a>
-            </li>
-            <li>
+
                 <a href="https://jamescooke.info/arrange-act-assert-pattern-for-python-developers.html"
                    class="card-link darkgrey" target="_blank">AAA Explained</a>
-            </li>
-            <li>
+
                 <a href="https://quintagroup.com/cms/python/python-unit-testing#:~:text=Testing%20Goal,documentation%20for%20the%20development%20process."
                    class="card-link darkgrey" target="_blank">Importance of tests</a>
-            </li>
-            <li>
+
                 <a href="https://www.fullstackpython.com/testing.html"
                    class="card-link darkgrey" target="_blank">Importance of tests</a>
-            </li>
+
             </p>
         </div>
 
