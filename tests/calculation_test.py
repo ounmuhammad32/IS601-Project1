@@ -6,7 +6,7 @@ from calculator.Calculations import Addition, Subtraction, Multiplication, Divis
 def test_calculation_addition_instance():
     """Testing the Calculator Addition"""
     # ARRANGE
-    tuple_list = (3, 2)
+    tuple_list = (1, 2)
     # ACT
     calculation = Addition.create(tuple_list)
     # ASSERT
@@ -16,7 +16,7 @@ def test_calculation_addition_instance():
 def test_calculation_subtraction_instance():
     """Testing the Calculator Subtract"""
     # ARRANGE
-    tuple_list = (3, 2)
+    tuple_list = (1, 2)
     # ACT
     calculation = Subtraction.create(tuple_list)
     # ASSERT
@@ -26,7 +26,7 @@ def test_calculation_subtraction_instance():
 def test_calculation_multiplication_instance():
     """Testing the Calculator Multiply"""
     # ARRANGE
-    tuple_list = (3, 2)
+    tuple_list = (1, 2)
     # ACT
     calculation = Multiplication.create(tuple_list)
     # ASSERT
@@ -36,7 +36,7 @@ def test_calculation_multiplication_instance():
 def test_calculation_division_instance():
     """Testing the Calculator Multiply"""
     # ARRANGE
-    tuple_list = (3, 2)
+    tuple_list = (1, 2)
     # ACT
     calculation = Division.create(tuple_list)
     # ASSERT
@@ -46,41 +46,41 @@ def test_calculation_division_instance():
 def test_calculation_add_get_result_method():
     """Testing the Calculator"""
     # ARRANGE
-    tuple_list = (3, 2)
+    tuple_list = (1, 2)
     # ACT
     calculation = Addition.create(tuple_list)
     # ASSERT
-    assert calculation.get_result() == 5
+    assert calculation.get_result() == 3
 
 
 def test_calculation_subtract_get_result_method():
     """Testing the Calculator Subtract"""
     # ARRANGE
-    tuple_list = (3, 2)
+    tuple_list = (1, 2)
     # ACT
     calculation = Subtraction.create(tuple_list)
     # ASSERT
-    assert calculation.get_result() == 1
+    assert calculation.get_result() == -1
 
 
 def test_calculation_multiply_get_result_method():
     """Testing the Calculator Multiplication"""
     # ARRANGE
-    tuple_list = (3, 2)
+    tuple_list = (1, 2)
     # ACT
     calculation = Multiplication.create(tuple_list)
     # ASSERT
-    assert calculation.get_result() == 6
+    assert calculation.get_result() == 2
 
 
 def test_calculation_division_get_results_method():
     """Testing the calculator division"""
     # ARRANGE
-    tuple_list = (3, 2)
+    tuple_list = (1, 2)
     # ACT
     calculation = Division.create(tuple_list)
     # ASSERT
-    assert calculation.get_result() == 1.5
+    assert calculation.get_result() == 0.5
 
 
 def test_calculator_division_exception():
