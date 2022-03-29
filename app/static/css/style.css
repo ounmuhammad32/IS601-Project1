@@ -157,7 +157,10 @@ ul {
   opacity: 100%;
   transition: opacity 0.5s;
 }
-
+#zoomA:hover { transform: scale(1.9); }
+.contbcgrd {
+    background-color: gray;
+}
 .card  {
     background-color: #808080;
 
