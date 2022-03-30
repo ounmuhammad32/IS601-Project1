@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="row">
-        <div class="col-12 py-4">
+        <div class="col-12 py-2">
             <img src="{{ url_for('static', filename='images/oop1.png') }}" class="img-fluid" alt="oopsystem">
         </div>
     </div>
@@ -11,12 +11,13 @@
             Object-Oriented Programming Concepts are very important for programming. Without having an idea about OOPS
             concepts, you will not be able to design systems in the object-oriented programming model.
             The object-oriented programming model revolves around the concept of Objects.
-            <strong>What is an Object?</strong>
+        <p><strong>What is an Object?</strong>
 
             An object is an instance of a Class. It contains properties and functions. They are like real-world objects.
             For example, your car, house, laptop, etc. are all objects. They have some specific properties and methods
             to perform some action.
-
+        </p>
+        <p>
             <strong> What is a Class? </strong>
 
             The Class defines the blueprint of Objects. They define the properties and functionalities of the objects.
@@ -45,11 +46,40 @@
                 have an “IS-A” relationship between objects. This is also called a method overriding because the
                 subclass has to override the superclass method for runtime polymorphism.
             </div>
-            <div class="col-4"><img src="{{ url_for('static', filename='images/oop1.png') }}"
+            <div class="col-4"><img src="{{ url_for('static', filename='images/oop2.png') }}"
                                     class="img-fluid"
                                     alt="aaa">
             </div>
         </div>
+
+        <div class="row align items">
+            <div class="col-8">
+                <h5 class="neonblue">Inheritance</h5>
+                Inheritance is the object-oriented programming concept where an object is based on another object.
+                Inheritance is the mechanism of code reuse. The object that is getting inherited is called the
+                superclass and the object that inherits the superclass is called a subclass..
+                We use extends keyword in java to implement inheritance.
+                <h5 class="neonblue">Association</h5>
+                Association is the OOPS concept to define the relationship between objects. The association defines the
+                multiplicity between objects. For example Teacher and Student objects. There is a one-to-many
+                relationship between a teacher and students. Similarly, a student can have a one-to-many relationship
+                with teacher objects. However, both student and teacher objects are independent of each other.
+                <h5 class="neonblue">Aggregation</h5>
+                Aggregation is a special type of association. In aggregation, objects have their own life cycle but
+                there is ownership. Whenever we have “HAS-A” relationship between objects and ownership then it’s a case
+                of aggregation.
+                <h5 class="neonblue">Composition</h5>
+                The composition is a special case of aggregation. The composition is a more restrictive form of
+                aggregation. When the contained object in “HAS-A” relationship can’t exist on its own, then it’s a case
+                of composition. For example, House has-a Room. Here the room can’t exist without the house. Composition
+                is said to be better than inheritance,
+            </div>
+            <div class="col-4"><img src="{{ url_for('static', filename='images/oop3.png') }}"
+                                    class="img-fluid"
+                                    alt="aaa">
+            </div>
+        </div>
+
     </div>
 
 
